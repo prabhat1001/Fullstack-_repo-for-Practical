@@ -4,7 +4,7 @@
   box-sizing: border-box;
  }
 body{
-    background-image: url('https://unsplash.com/photos/cckf4TsHAuw');
+    background-image: url('../office1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
