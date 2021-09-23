@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planetary Animation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+        
+        *{margin: 0;padding: 0;box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+
+        body{
+            display:flex;
+            justify-content: center;
+            min-height: 100vh;
+            align-items: center;
+            overflow: hidden;
+        }
+        .planet{
+            display: flex;
+            flex-direction: column;
+        }
+        .planet h2{
+            color: #fff;
+            font-size: 4em;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+        .planet .container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .planetearth{
+            position: relative;
+            justify-content: center;
+            height: 100vh;
+            min-width: 50%;
+            align-items: center;
+            background: #182357;
+        }
+        .planetearth .loader{
+            position:relative;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            animation: animate 4s linear infinite;
+        }
+        @keyframes animate{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+        .planetearth .loader:before{
+            content: '';
+            position:absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to top,transparent,rgba(0,225,249,0.4));
+            background-size: 200px 360px;
+            background-repeat: no-repeat;
+            border-top-left-radius: 200px;
+            border-bottom-left-radius: 200px;
+        }
+        .planetearth .loader:after{
+            content: '';
+            position:absolute;
+            top: 0;
+            left: 50%;
+            transform:translateX(-50%);
+            width: 10px;
+            height: 10px;
+            background: #00fff9;
+            border-radius: 50%;
+            z-index: 10;
+            box-shadow: 0 0 10px #00fff9,
+                        0 0 20px #00fff9,
+                        0 0 30px #00fff9,
+                        0 0 40px #00fff9,
+                        0 0 50px #00fff9,
+                        0 0 60px #00fff9,
+                        0 0 70px #00fff9,
+                        0 0 80px #00fff9,
+                        0 0 90px #00fff9,
+                        0 0 100px #00fff9;
+        }
+        .planetearth .loader span{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            background: #182357;
+            border-radius: 50%;
+        }
+        .earth{
+            position: absolute;
+            width: 340px;
+            height: 340px;
+            background:url('./assets/continents.jpg');
+            border-radius: 50%;
+            background-size: cover;
+            margin-top: 135px;
+            box-shadow: inset 0 0 20px #03a9f4,
+                              0 0 120px #03a9f4;
+            animation: animateEarth 20s linear infinite;
+
+        }
+        @keyframes animateEarth{
+            0%{
+                background-position: 0;
+            }
+            100%{
+                background-position: 162.5%;
+            }
+        }
+
+
+        /*----------------------  MARS  -----------------------*/
+
+        .planetmars{
+            position: relative;
+            justify-content: center;
+            height: 100vh;
+            min-width: 50%;
+            align-items: center;
+            background: #190703;
+        }
+        .planetmars .loader{
+            position:relative;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            animation: animate 4s linear infinite;
+        }
+        @keyframes animate{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+        .planetmars .loader:before{
+            content: '';
+            position:absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to top,transparent,rgba(248, 10, 2, 0.945));
+            background-size: 200px 360px;
+            background-repeat: no-repeat;
+            border-top-left-radius: 200px;
+            border-bottom-left-radius: 200px;
+        }
+        .planetmars .loader:after{
+            content: '';
+            position:absolute;
+            top: 0;
+            left: 50%;
+            transform:translateX(-50%);
+            width: 10px;
+            height: 10px;
+            background: #ff6a6a;
+            border-radius: 50%;
+            z-index: 10;
+            box-shadow: 0 0 10px #ff3222,
+                        0 0 20px #ff3222,
+                        0 0 30px #ff3222,
+                        0 0 40px #ff3222,
+                        0 0 50px #ff3222,
+                        0 0 60px #ff3222,
+                        0 0 70px #ff3222,
+                        0 0 80px #ff3222,
+                        0 0 90px #ff3222,
+                        0 0 100px #ff3222;
+        }
+        .planetmars .loader span{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            background: #190703;
+            border-radius: 50%;
+        }
+        .mars{
+            position: absolute;
+            width: 340px;
+            height: 340px;
+            background:url('./assets/unnamed_edited.jpg');
+            border-radius: 50%;
+            background-size: cover;
+            margin-top: 135px;
+            box-shadow: inset 0 0 20px #ff3222,
+                              0 0 120px #ff3222;
+            animation: mars 6s linear infinite;
+
+        }
+        @keyframes mars {
+            0%{
+                background-position: 0;
+            }
+            100%{
+                background-position: -340px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="planet planetearth">
+        <h2>EARTH</h2>
+        <div class="loader"><span></span></div>
+        <div class="earth"></div>
+    </div>
+
+    <div class="planet planetmars">
+        <h2>MARS</h2>
+        <div class="loader"><span></span></div>
+        <div class="mars"></div>
+    </div>
+
+</body>
+</html>

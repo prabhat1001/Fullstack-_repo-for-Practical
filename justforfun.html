@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>justforfun</title>
+<style>
+    .container{
+        position: relative;
+    }
+    .box{
+        width: 150px;
+        height: 150px;
+        opacity: 0.9;
+        position: absolute;
+    }
+    .red{
+        background: #5e5e5e;
+        z-index: 1;
+    }
+    .green{
+        top: 30px;
+        left: 30px;
+        background: #353535;
+        z-index: 2;
+    }
+    .blue{
+        top: 60px;
+        left: 60px;
+        background: #252525;
+        border-radius: 100%;
+        z-index: 3;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="box red"></div>
+        <div class="box green"></div>
+        <div class="box blue"></div>
+    </div>
+</body>
+</html>
